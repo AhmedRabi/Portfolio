@@ -1,0 +1,49 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul li {
+  font-size: 25px;
+  padding: 35px 15px;
+  height: 30px;
+}
+
+nav ul li a {
+  color: #707070;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #0071bc;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  color: #0071bc;
+}
+/*# sourceMappingURL=main.css.map */
