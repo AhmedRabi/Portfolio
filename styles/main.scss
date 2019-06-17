@@ -1,52 +1,165 @@
-$colors :(
-    white:#fff,
-    grey:#707070,
-    darkGrey:#666,
-    blue:rgb(0, 113, 188),
-    lightBlue:rgba(0,113,188,0.35),
-    black : #1A1818,
-    lightBlack:rgba(0,0,0,0.55),
-    lighterBlack:rgba(0,0,0,0.2)
+$colors: (
+  white: #fff,
+  grey: #707070,
+  darkGrey: #666,
+  blue: rgb(0, 113, 188),
+  lightBlue: rgba(0, 113, 188, 0.35),
+  black: #1a1818,
+  lightBlack: rgba(0, 0, 0, 0.55),
+  lighterBlack: rgba(0, 0, 0, 0.2)
 );
 
-@function Color($color){
-    @return map-get($colors,$color)
-};
-
-body{
-    font-family: 'Raleway', sans-serif;
+@function Color($color) {
+  @return map-get($colors, $color);
 }
 
-nav{
-    background-color:Color(white);
-    position:fixed;
-    top:0; 
-    right:0;
-    left:0;
-    box-shadow:0px 5px 10px Color(lighterBlack);
-    height:100px;
+body {
+  font-family: "Raleway", sans-serif;
+}
+* {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+}
+
+nav {
+  background-color: Color(white);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10927309199999;
+  box-shadow: 0px 5px 10px Color(lighterBlack);
+  height: 100px;
+  .container {
+    display: flex;
     justify-content: flex-end;
-    ul{
-        list-style-type: none;
-       
-        display:flex;
-        flex-direction: row;
-        li{
-            font-size:25px;
-            padding:35px 15px;
-            height:30px;
-            a{
-                color:Color(grey);
-                font-weight:bold;
-            }
-            a:hover{
-                color:Color(blue);
-                text-decoration:none;
-            }
-            a.active{
-                color:Color(blue);              
-            }
-            
-        }
+  }
+  ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    li {
+      font-size: 25px;
+      padding: 35px 15px;
+      height: 30px;
+      a {
+        color: Color(grey);
+        font-weight: bold;
+      }
+      a:hover {
+        color: Color(blue);
+        text-decoration: none;
+      }
+      a.active {
+        color: Color(blue);
+      }
     }
+  }
+}
+section#Portfolio {
+  padding-top: 100px;
+  height: calc(100vh + 100px);
+  overflow: hidden;
+  position: relative;
+  //   .scrollHolder {
+  //     position: absolute;
+  //     z-index: 999;
+  //     bottom: 3%;
+  //     left: 50%;
+
+  //     a.scroll {
+  //       color: Color(blue);
+  //       font-size: 25px;
+  //     }
+  //   }
+  ul.navs {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    li {
+      font-size: 25px;
+      padding: 35px 15px;
+      height: 30px;
+      a {
+        color: Color(grey);
+        font-weight: bold;
+      }
+      a:hover {
+        color: Color(blue);
+        text-decoration: none;
+      }
+      a.active {
+        color: Color(blue);
+      }
+    }
+  }
+  .holder {
+    padding: 10px 40px;
+    .projectCard {
+      height: 250px;
+      background-color: rgba(0, 153, 204, 0.041);
+      border: 1px solid Color(black);
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+      .Layover {
+        position: relative;
+        height: 100%;
+        top: 100%;
+        right: 100%;
+        background-color: rgba(Color(blue), 0.6);
+        .visitLink {
+          position: absolute;
+          top: 30%;
+          left: 40%;
+          .linkbtn {
+            border: 1px solid Color(blue);
+            color: white;
+            font-weight: bold;
+            background: Color(blue);
+          }
+        }
+        .projectData {
+          position: absolute;
+          bottom: 10px;
+          left: 15px;
+          label {
+            display: block;
+          }
+          .projectName {
+            font-weight: bold;
+            color: white;
+            padding: 0px;
+            margin: 0px;
+          }
+          .category {
+            color: Color(white);
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .projectDate {
+          position: absolute;
+          bottom: 10px;
+          right: 15px;
+          label {
+            color: Color(white);
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+    .projectCard:hover .Layover {
+      top: -100%;
+      right: 0%;
+    }
+    .projectCard:hover {
+      border: 1px solid Color(blue);
+    }
+  }
 }
