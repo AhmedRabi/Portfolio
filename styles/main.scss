@@ -63,17 +63,20 @@ section#Portfolio {
   height: calc(100vh + 100px);
   overflow: hidden;
   position: relative;
-  //   .scrollHolder {
-  //     position: absolute;
-  //     z-index: 999;
-  //     bottom: 3%;
-  //     left: 50%;
-
-  //     a.scroll {
-  //       color: Color(blue);
-  //       font-size: 25px;
-  //     }
-  //   }
+  -webkit-box-shadow: 0px -50px 10px 0px Color(black) inset;
+  -moz-box-shadow: 0px -50px 10px 0px Color(black) inset;
+       box-shadow: 0px -50px 10px 0px Color(black) inset;
+    .scrollHolder {
+      position: absolute;
+      display:inline-block;
+      z-index: 999;
+      bottom: 0%;
+      left: 50%;
+      a.scroll {
+        color: Color(blue);
+        font-size: 25px;
+      }
+    }
   ul.navs {
     list-style-type: none;
 
@@ -98,6 +101,7 @@ section#Portfolio {
   }
   .holder {
     padding: 10px 40px;
+    z-index:0;
     .projectCard {
       height: 250px;
       background-color: rgba(0, 153, 204, 0.041);
@@ -112,17 +116,10 @@ section#Portfolio {
         top: 100%;
         right: 100%;
         background-color: rgba(Color(blue), 0.6);
-        .visitLink {
-          position: absolute;
-          top: 30%;
-          left: 40%;
-          .linkbtn {
-            border: 1px solid Color(blue);
-            color: white;
-            font-weight: bold;
-            background: Color(blue);
-          }
-        }
+        a{
+          width:100%;
+          height:100%;
+        }       
         .projectData {
           position: absolute;
           bottom: 10px;
@@ -137,7 +134,7 @@ section#Portfolio {
             margin: 0px;
           }
           .category {
-            color: Color(white);
+            color: Color(blue);
             margin: 0;
             padding: 0;
           }
@@ -147,7 +144,7 @@ section#Portfolio {
           bottom: 10px;
           right: 15px;
           label {
-            color: Color(white);
+            color: Color(blue);
             margin: 0;
             padding: 0;
           }

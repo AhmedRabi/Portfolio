@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var scroll = function() {
-    $(".scrollHolder").animate({ bottom: "30" }, 2000, function() {
-      $(".scrollHolder").animate({ bottom: "60" }, 1500, function() {
+    $(".scrollHolder").animate({ bottom: "0" }, 2000, function() {
+      $(".scrollHolder").animate({ bottom: "30" }, 1500, function() {
         scroll();
       });
     });
@@ -9,6 +9,11 @@ $(document).ready(function() {
   scroll();
 
   $(".scrollHolder").click(function() {
-    $("section#Portfolio").animate({ height: auto }, 3000);
+    $('section#Portfolio').animate({
+      height: $('section#Portfolio').get(0).scrollHeight
+  }, 1000, function(){
+      $(this).height('auto');
+  });
+  $('body,html').animate({scrollTop:"200px"},10);
   });
 });

@@ -68,6 +68,21 @@ section#Portfolio {
   height: calc(100vh + 100px);
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 0px -50px 10px 0px #1a1818 inset;
+  box-shadow: 0px -50px 10px 0px #1a1818 inset;
+}
+
+section#Portfolio .scrollHolder {
+  position: absolute;
+  display: inline-block;
+  z-index: 999;
+  bottom: 0%;
+  left: 50%;
+}
+
+section#Portfolio .scrollHolder a.scroll {
+  color: #0071bc;
+  font-size: 25px;
 }
 
 section#Portfolio ul.navs {
@@ -103,6 +118,7 @@ section#Portfolio ul.navs li a.active {
 
 section#Portfolio .holder {
   padding: 10px 40px;
+  z-index: 0;
 }
 
 section#Portfolio .holder .projectCard {
@@ -124,17 +140,9 @@ section#Portfolio .holder .projectCard .Layover {
   background-color: rgba(0, 113, 188, 0.6);
 }
 
-section#Portfolio .holder .projectCard .Layover .visitLink {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-}
-
-section#Portfolio .holder .projectCard .Layover .visitLink .linkbtn {
-  border: 1px solid #0071bc;
-  color: white;
-  font-weight: bold;
-  background: #0071bc;
+section#Portfolio .holder .projectCard .Layover a {
+  width: 100%;
+  height: 100%;
 }
 
 section#Portfolio .holder .projectCard .Layover .projectData {
@@ -155,7 +163,7 @@ section#Portfolio .holder .projectCard .Layover .projectData .projectName {
 }
 
 section#Portfolio .holder .projectCard .Layover .projectData .category {
-  color: #fff;
+  color: #0071bc;
   margin: 0;
   padding: 0;
 }
@@ -167,7 +175,7 @@ section#Portfolio .holder .projectCard .Layover .projectDate {
 }
 
 section#Portfolio .holder .projectCard .Layover .projectDate label {
-  color: #fff;
+  color: #0071bc;
   margin: 0;
   padding: 0;
 }
