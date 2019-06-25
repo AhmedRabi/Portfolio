@@ -17,7 +17,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10927309199999;
+  z-index: 20;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   height: 100px;
@@ -65,54 +65,39 @@ nav ul li a.active {
 
 section#Portfolio {
   padding-top: 100px;
-  height: calc(100vh + 100px);
+  height: 470px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 0px -50px 10px 0px #1a1818 inset;
-  box-shadow: 0px -50px 10px 0px #1a1818 inset;
 }
 
-section#Portfolio .scrollHolder {
+section#Portfolio #all .LoadMore {
+  padding: 10px 15px;
+  background-color: #666;
+  color: white;
+  font-weight: bold;
   position: absolute;
-  display: inline-block;
-  z-index: 999;
-  bottom: 0%;
+  bottom: 1px;
   left: 50%;
+  font-family: "corbel";
 }
 
-section#Portfolio .scrollHolder a.scroll {
-  color: #0071bc;
-  font-size: 25px;
-}
-
-section#Portfolio ul.navs {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-section#Portfolio ul.navs li {
+section#Portfolio ul.nav li {
   font-size: 25px;
   padding: 35px 15px;
   height: 30px;
 }
 
-section#Portfolio ul.navs li a {
+section#Portfolio ul.nav li a {
   color: #707070;
   font-weight: bold;
 }
 
-section#Portfolio ul.navs li a:hover {
+section#Portfolio ul.nav li a:hover {
   color: #0071bc;
   text-decoration: none;
 }
 
-section#Portfolio ul.navs li a.active {
+section#Portfolio ul.nav li a.active {
   color: #0071bc;
 }
 
@@ -137,7 +122,7 @@ section#Portfolio .holder .projectCard .Layover {
   height: 100%;
   top: 100%;
   right: 100%;
-  background-color: rgba(0, 113, 188, 0.6);
+  background-color: rgba(0, 113, 188, 0.35);
 }
 
 section#Portfolio .holder .projectCard .Layover a {
@@ -187,5 +172,116 @@ section#Portfolio .holder .projectCard:hover .Layover {
 
 section#Portfolio .holder .projectCard:hover {
   border: 1px solid #0071bc;
+}
+
+.bg-blue {
+  background-color: #0071bc;
+  color: white;
+}
+
+section#CV {
+  height: 100vh;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+section#CV .items-holder {
+  width: 90%;
+}
+
+section#CV .items-holder .item {
+  margin-bottom: 60px;
+}
+
+section#CV .items-holder .item ul li {
+  font-size: 17px;
+}
+
+section#CV .side {
+  height: 100vh;
+  margin-right: -15px;
+  -webkit-box-shadow: 15px 10px 0px 0px #1a1818;
+          box-shadow: 15px 10px 0px 0px #1a1818;
+}
+
+section#CV .side .profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 175px;
+  height: 175px;
+}
+
+section#CV .side .Name h1 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+section#CV .side .items-holder {
+  width: 90%;
+}
+
+section#CV .side .items-holder .item {
+  margin-bottom: 10px;
+}
+
+section#CV .side .items-holder .item ul {
+  list-style-type: square;
+}
+
+section#CV .side .items-holder .item ul li {
+  font-size: 13px;
+}
+
+section#CV .side::after {
+  content: "";
+  position: absolute;
+  background-color: #666;
+  width: 100px;
+  height: 100vh;
+  right: -30px;
+  top: 20px;
+  z-index: -2;
+}
+
+section#CV .title {
+  background-color: white;
+  color: black;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 3px;
+  border-radius: 1.5em;
+  height: 1.7em;
+}
+
+section#CV .title .title-circle {
+  background-color: #1a1818;
+  border-radius: 50%;
+  width: 1.7em;
+  height: 1.7em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section#CV .title-lg-dark {
+  background-color: Black;
+  color: white;
+  position: relative;
+  font-size: 20px;
+  height: 1.5em;
+  border-radius: 30px;
+  text-align: center;
+}
+
+section#CV .title-lg-dark .title-circle {
+  background-color: #0071bc;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 /*# sourceMappingURL=main.css.map */

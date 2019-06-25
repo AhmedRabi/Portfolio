@@ -2,7 +2,7 @@ $colors: (
   white: #fff,
   grey: #707070,
   darkGrey: #666,
-  blue: rgb(0, 113, 188),
+  blue: #0071bc,
   lightBlue: rgba(0, 113, 188, 0.35),
   black: #1a1818,
   lightBlack: rgba(0, 0, 0, 0.55),
@@ -28,7 +28,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10927309199999;
+  z-index: 20;
   box-shadow: 0px 5px 10px Color(lighterBlack);
   height: 100px;
   .container {
@@ -58,30 +58,30 @@ nav {
     }
   }
 }
+
 section#Portfolio {
   padding-top: 100px;
-  height: calc(100vh + 100px);
+  height: 470px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 0px -50px 10px 0px Color(black) inset;
-  -moz-box-shadow: 0px -50px 10px 0px Color(black) inset;
-       box-shadow: 0px -50px 10px 0px Color(black) inset;
-    .scrollHolder {
+  #all {
+    .LoadMore {
+      padding: 10px 15px;
+      background-color: Color(darkGrey);
+      color: white;
+      font-weight: bold;
       position: absolute;
-      display:inline-block;
-      z-index: 999;
-      bottom: 0%;
+      bottom: 1px;
       left: 50%;
-      a.scroll {
-        color: Color(blue);
-        font-size: 25px;
-      }
+      font-family: "corbel";
     }
-  ul.navs {
-    list-style-type: none;
+  }
 
-    display: flex;
-    flex-direction: row;
+  ul.nav {
+    // list-style-type: none;
+
+    // display: flex;
+    // flex-direction: row;
     li {
       font-size: 25px;
       padding: 35px 15px;
@@ -101,7 +101,7 @@ section#Portfolio {
   }
   .holder {
     padding: 10px 40px;
-    z-index:0;
+    z-index: 0;
     .projectCard {
       height: 250px;
       background-color: rgba(0, 153, 204, 0.041);
@@ -115,11 +115,11 @@ section#Portfolio {
         height: 100%;
         top: 100%;
         right: 100%;
-        background-color: rgba(Color(blue), 0.6);
-        a{
-          width:100%;
-          height:100%;
-        }       
+        background-color: Color(lightBlue);
+        a {
+          width: 100%;
+          height: 100%;
+        }
         .projectData {
           position: absolute;
           bottom: 10px;
@@ -157,6 +157,103 @@ section#Portfolio {
     }
     .projectCard:hover {
       border: 1px solid Color(blue);
+    }
+  }
+}
+.bg-blue {
+  background-color: Color(blue);
+  color: white;
+}
+section#CV {
+  height: 100vh;
+  padding-top: 50px;
+  overflow: hidden;
+  .items-holder {
+    width: 90%;
+    .item {
+      margin-bottom: 60px;
+      ul {
+        li {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  .side {
+    height: 100vh;
+    margin-right: -15px;
+    box-shadow: 15px 10px 0px 0px Color(black);
+    .profile-image {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 175px;
+      height: 175px;
+    }
+    .Name {
+      h1 {
+        color: white;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+    .items-holder {
+      width: 90%;
+      .item {
+        margin-bottom: 10px;
+        ul {
+          list-style-type: square;
+          li {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .side::after {
+    content: "";
+    position: absolute;
+    background-color: Color(darkGrey);
+    width: 100px;
+    height: 100vh;
+    right: -30px;
+    top: 20px;
+    z-index: -2;
+  }
+  .title {
+    background-color: white;
+    color: black;
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 1.5em;
+    height: 1.7em;
+    .title-circle {
+      background-color: Color(black);
+      border-radius: 50%;
+      width: 1.7em;
+      height: 1.7em;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .title-lg-dark {
+    background-color: Black;
+    color: white;
+    position: relative;
+    font-size: 20px;
+    height: 1.5em;
+    border-radius: 30px;
+    text-align: center;
+    .title-circle {
+      background-color: Color(blue);
+      border-radius: 50%;
+      width: 1.5em;
+      height: 1.5em;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
   }
 }
