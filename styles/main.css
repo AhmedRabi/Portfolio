@@ -197,6 +197,11 @@ section#CV .items-holder .item ul li {
   font-size: 17px;
 }
 
+section#CV .items-holder .item ul.double-list li {
+  width: 50%;
+  float: left;
+}
+
 section#CV .side {
   height: 100vh;
   margin-right: -15px;
@@ -211,7 +216,11 @@ section#CV .side .profile-image {
   height: 175px;
 }
 
-section#CV .side .Name h1 {
+section#CV .side .Name {
+  text-align: center;
+}
+
+section#CV .side .Name h2 {
   color: white;
   font-weight: 700;
   text-align: center;

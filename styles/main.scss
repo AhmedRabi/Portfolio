@@ -177,6 +177,12 @@ section#CV {
           font-size: 17px;
         }
       }
+      ul.double-list {
+        li {
+          width: 50%;
+          float: left;
+        }
+      }
     }
   }
   .side {
@@ -190,7 +196,8 @@ section#CV {
       height: 175px;
     }
     .Name {
-      h1 {
+      text-align: center;
+      h2 {
         color: white;
         font-weight: 700;
         text-align: center;
